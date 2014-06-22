@@ -6,17 +6,15 @@ NEI$SCC <- as.factor(NEI$SCC)
 NEI$Pollutant <- as.factor(NEI$Pollutant)
 NEI$type <- as.factor(NEI$type)
 
-# Across the United States, how have emissions 
-# from coal combustion-related sources changed from 1999–2008?
-
+# How have emissions from motor vehicle sources changed 
+# from 1999–2008 in Baltimore City? 
 
 # motor vehicles SCC Types
 ccSCC <- subset(SCC, SCC.Level.One == "Mobile Sources")
 
 # selecting only baltmore data
 # bmData <- subset(NEI, (fips == "24510"))
-# oldBMData <- bmData
-# selecting only baltmore data and coal combustion
+# selecting only baltmore data and vehicle SCC
 bmData <- subset(NEI, (fips == "24510" & SCC %in% ccSCC$SCC))
 
 splitTotalsPerYear <- split(bmData, list(bmData$year))

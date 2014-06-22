@@ -6,8 +6,11 @@ NEI$SCC <- as.factor(NEI$SCC)
 NEI$Pollutant <- as.factor(NEI$Pollutant)
 NEI$type <- as.factor(NEI$type)
 
-# How have emissions from motor vehicle sources changed 
-# from 1999–2008 in Baltimore City? 
+# 6. Compare emissions from motor vehicle sources in  Baltimore City 
+# with emissions from motor vehicle sources in  Los Angeles County, 
+# California (fips == "06037"). 
+# Which city  has seen greater changes over time in motor vehicle 
+# emissions?
 
 # motor vehicles SCC Types
 ccSCC <- subset(SCC, SCC.Level.One == "Mobile Sources")
